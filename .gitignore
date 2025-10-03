@@ -7,8 +7,6 @@ __pycache__/
 venv/
 *.sqlite3
 
-# Models
-models/*.pkl
 
 # VSCode
 .vscode/

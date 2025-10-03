@@ -1,0 +1,6 @@
+﻿source,destination,days_to_departure,duration_mins,total_stops,price
+Delhi,Mumbai,30,120,0,5000
+Delhi,Bangalore,15,150,1,6000
+Mumbai,Chennai,20,180,1,5500
+Bangalore,Delhi,10,150,0,6500
+Chennai,Mumbai,5,180,0,7000

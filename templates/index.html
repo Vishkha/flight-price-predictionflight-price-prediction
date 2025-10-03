@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flight Price Prediction</title>
+</head>
+<body>
+    <h1>Flight Price Prediction</h1>
+    <form method="POST" action="/predict">
+        <label>Days to Departure:</label>
+        <input type="number" name="days_to_departure" required><br><br>
+
+        <label>Duration (mins):</label>
+        <input type="number" name="duration_mins" required><br><br>
+
+        <label>Total Stops:</label>
+        <input type="number" name="total_stops" required><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+        <h2>Predicted Price: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>

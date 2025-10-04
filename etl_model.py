@@ -7,7 +7,7 @@ from sklearn.metrics import mean_squared_error
 import joblib
 import os
 
-df = pd.read_csv('data/flights.csv')
+df = pd.read_csv('data/flight_prices_starter.csv')
 df['duration_mins'].fillna(df['duration_mins'].median(), inplace=True)
 
 Q1 = df['price'].quantile(0.25)

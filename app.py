@@ -35,7 +35,7 @@ model = joblib.load('models/model.pkl')
 # Root route - show HTML form
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('index1.html')
 
 # Predict route
 @app.route('/predict', methods=['POST'])
@@ -49,9 +49,9 @@ def predict():
         features = np.array([[days_to_departure, duration_mins, total_stops]])
         prediction = model.predict(features)[0]
         
-        return render_template('index.html', prediction=round(float(prediction), 2))
+        return render_template('index1.html', prediction=round(float(prediction), 2))
     except Exception as e:
-        return render_template('index.html', prediction=f"Error: {str(e)}")
+        return render_template('index1.html', prediction=f"Error: {str(e)}")
 
 if __name__ == '__main__':
     app.run(debug=True)
